@@ -21,7 +21,7 @@ buttons.forEach(button=>{
         }
         else if(button.innerText==="tan"){
             output.innerText += "tan("
-            expression+="Math.cos("
+            expression+="Math.tan("
 
         }
         else if(button.innerText=="rad"| button.innerText=="Deg"){
@@ -29,7 +29,12 @@ buttons.forEach(button=>{
         }
         else if( button.innerText==="cos"){
             output.innerText += "cos("
+            expression+="Math.cos("
 
+        }
+        else if(button.innerText==="x!"){
+            output.innerText+="!"
+            expression+="!";
         }
         else if(button.innerText==="2nd"){
             sin.innerText = "Sin-1 "
@@ -39,6 +44,7 @@ buttons.forEach(button=>{
         }
         else if(button.innerText==="AC"){
             output.innerText="";
+            expression="";
         }
         else if(button.innerText===")"){
             output.innerText+=")";
@@ -51,8 +57,8 @@ buttons.forEach(button=>{
         }
         
         else if(button.innerText==="="){
-            output.innerText=Math.round(eval(expression));
-            expression="";
+            console.log(expression);
+            output.innerText=eval(expression);
         }
 
         else{
